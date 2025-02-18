@@ -134,6 +134,12 @@ select{
     height: auto;
     margin-left: -80px;
 }
+input[type="radio"] {
+    transform: translateY(25px); 
+    margin-left: 30%;
+    
+    vertical-align: middle;
+}
     }
 body img:hover{
     transform: scale(1.12);
