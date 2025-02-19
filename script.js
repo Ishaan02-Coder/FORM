@@ -156,7 +156,7 @@ function validatePhone(phone) {
 }
 
 function validateID(BITS_ID) {
-    let re = /^202[0-4]([AB][ABCD1-7]){1,2}[PT]S(?!0000)([01][0-9]{3})P$/;
+    let re = /^202[0-4](([AB][ABCD1-7]){1,2}[PT]S||([AB][ABCD1-7]){1,2})(?!0000)([01][0-9]{3})P$/;
     return re.test(BITS_ID);
 }
 
