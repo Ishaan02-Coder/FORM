@@ -2,6 +2,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: paleturquoise;
     text-align: center;
+    overflow-x: hidden;
     /* background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/BITS_Pilani-Logo.svg/1200px-BITS_Pilani-Logo.svg.png");
     background-repeat: no-repeat;
     background-size: 200px;
