@@ -2,20 +2,22 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: paleturquoise;
     text-align: center;
-    /* background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/BITS_Pilani-Logo.svg/1200px-BITS_Pilani-Logo.svg.png");
-    background-repeat: no-repeat;
-    background-size: 200px;
-    background-position: 20px 20px; */
+    background-image: url("dvm.png");
+    background-repeat: repeat;
+    animation: scrollBackground 25s linear infinite ;
+    background-position: 20px 20px;
+    
+    filter: brightness(100%);
 }
 
-html, body {
+html, body {  
     overflow-x: hidden;
 }
 
 
 .container {
     width: 400px;
-    background: rgba(12, 122, 153, 0.905);
+    background: rgb(13, 162, 203);
     padding: 20px;
     margin: 50px auto;
     border-radius: 10px;
@@ -38,6 +40,10 @@ input,select, button {
     margin-bottom: 10px;
     
 }
+.pics{
+    color: rgba(12, 206, 89, 0.905);
+    
+}
 
 
 button {
@@ -50,9 +56,13 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-@media(max-width:1300px)
+@media(max-width:1500px)
 {
-   
+    
+   .pics{
+    color: black;
+    font-weight: bold;
+   }
 .container {
     width: 400px;
 }
@@ -82,6 +92,7 @@ input[type="checkbox"] {
 }
 input{
     background-color: aquamarine;
+    font-weight: bold;
 }
 option{
     background-color: bisque;
@@ -89,7 +100,7 @@ option{
 select{
     background-color: aquamarine;
 }
-@media(min-width:1300px){
+@media(min-width:1500px){
 
 .VARSITY{
     position: absolute;
@@ -101,12 +112,12 @@ select{
 .hoodie{
     position: absolute;
     top: 750px;
-    left: 5px;
+    left: 25px;
     font-weight: bold;
 }
 .tshirt{
     position: absolute;
-    left: 0;
+    left: 20px;
     font-weight: bold;
 }
 .polo{
@@ -125,6 +136,9 @@ select{
 {
     input[type="checkbox"] {
         transform: translateX(-100px); 
+    }
+    body{
+        background-size: 100px;
     }
 .container {
     width: 250px;
@@ -149,4 +163,26 @@ body img:hover{
 }
 body img{
     transition: transform 1s ease-in-out;
+}
+input::placeholder{
+    color: rgb(57, 1, 130);
+    font-weight: normal;
+}
+@keyframes flip3D {
+    0% { opacity: 0; transform: rotateY(90deg) scale(0.5); }
+    50% { opacity: 1; transform: rotateY(-10deg) scale(1.2); }
+    100% { opacity: 1; transform: rotateY(0deg) scale(1); }
+}
+
+h2{
+    display: inline-block;
+    transform-origin: center;
+    animation: flip3D 1.5s ease-in-out ;
+}
+
+
+
+@keyframes scrollBackground {
+    from { background-position: 0 0; }
+    to { background-position: 0 100vh; }
 }
